@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    padding: var(--spacing-size-normal);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Text-container {
+    font-size: var(--font-size-xmamoth);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .image {
+    width: 212px;
+    height: 212px;
+  }
