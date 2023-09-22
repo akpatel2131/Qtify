@@ -2,6 +2,7 @@
   --color-primary: #34c94b;
   --color-black: #121212;
   --color-white: #fff;
+  --color-lightgray: lightgray;
   --font-size-tiny: 4px;
   --font-size-xxsmall: 8px;
   --font-size-xsmall: 10px;
@@ -32,5 +33,18 @@
   --width-icon: 25px;
   --width-search-input: 450px;
   --height-icon: 16px;
+
+  --border-radius-tiny: 4px;
+  --border-radius-xxsmall: 8px;
+  --border-radius-xsmall: 10px;
+  --border-radius-small: 12px;
+  --border-radius-normal: 16px;
+  --border-radius-large: 18px;
+  --border-radius-xlarge: 20px;
+  --border-radius-xxlarge: 22px;
+  --border-radius-huge: 24px;
+  --border-radius-xhuge: 26px;
+  --border-radius-xxhuge: 28px;
+  --border-radius-mamoth: 30px;
 }
 

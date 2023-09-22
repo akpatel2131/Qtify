@@ -1,0 +1,34 @@
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-size-normal);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album{
+    font-size: var(--font-size-xlarge);
+    font-weight: 600;
+    line-height: normal;
+}
+
+.Button{
+    color: var(--color-primary);
+    font-size: var(--font-size-xlarge);
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--font-size-xxsmall);
+    justify-content: space-around;
+}
