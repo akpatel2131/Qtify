@@ -4,12 +4,11 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 export default function Grid() {
-    const [collapse, setCollapse] = useState(true);
+    const [collapse, setCollapse] = useState(false);
     const [data, setData] = useState([]);
 
     const fetchData = async()=>{
       const result = await axios.get("https://qtify-backend-labs.crio.do/albums/top");
-      console.log({ result });
       setData(result.data);
     }
 
@@ -21,7 +20,7 @@ export default function Grid() {
       <div className={styles.container}>
         <div className={styles.header}>
             <div className={styles.album}>Top Album</div>
-            {collapse ? <button className={styles.Button}>collapse</button> : <button>show all</button>}
+            {collapse ? <button className={styles.Button} onClick={()=> setCollapse(false)}>show all</button> : <button className={styles.Button}onClick={()=> setCollapse(true)}>collapse</button>}
         </div>
         <div className={styles.grid}>
           {data.map((item)=>( 
