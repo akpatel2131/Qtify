@@ -32,7 +32,7 @@ const SwiperTag = ( { value }) =>{
 
     useEffect(()=>{
       fetchData();
-    },[])
+    })
 
     return (
         <div className={styles.scrollContainer}>

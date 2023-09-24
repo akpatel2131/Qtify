@@ -22,7 +22,7 @@ export default function Grid({ title, url}) {
 
     useEffect(()=>{
       fetchData();
-    },[])
+    })
 
     return (
       <div className={styles.container}>
