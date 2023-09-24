@@ -1,4 +1,9 @@
 
+.header{
+    font-size: var(--font-size-xlarge);
+    font-weight: 600;
+    line-height: normal;
+}
 
 .container{
     display: flex;
@@ -6,32 +11,28 @@
     padding: var(--spacing-size-normal);
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.tagContainer{
+    padding: var(--spacing-size-normal);
 
-.album{
-    font-size: var(--font-size-xlarge);
-    font-weight: 600;
-    line-height: normal;
-}
+    & :global .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
+        color: var(--color-white);
+        font-size: var(--font-size-xnormal);
+        font-weight: 600;
+    }
 
-.Button{
-    color: var(--color-primary);
-    font-size: var(--font-size-xlarge);
-    font-weight: 600;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
+    & :global .css-1h9z7r5-MuiButtonBase-root-MuiTab-root{
+        color: var(--color-white);
+        font-size: var(--font-size-xnormal);
+        font-weight: 600;
+    }
 
-.grid{
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--font-size-xxsmall);
-    justify-content: space-around;
+    & :global .css-1aquho2-MuiTabs-indicator{
+        background-color: var( --color-primary);
+    }
+
+    & :global .css-13xfq8m-MuiTabPanel-root{
+        padding: var(--spacing-size-normal) 0;
+    }
 }
 
 .scrollContainer{
