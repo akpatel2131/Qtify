@@ -1,7 +1,8 @@
 import styles from "./Grid.module.css";
 import Card from "../Card/Card";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useEffectOnce } from 'usehooks-ts'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -20,7 +21,7 @@ export default function Grid({ title, url}) {
       setData(result.data);
     }
 
-    useEffect(()=>{
+    useEffectOnce(()=>{
       fetchData();
     })
 
@@ -38,8 +39,10 @@ export default function Grid({ title, url}) {
               modules={[Navigation]} 
               className="mySwiper"
               >
-              {data.map((item)=>( 
-                <SwiperSlide><Card data={item}/></SwiperSlide>
+              {data.map((item, index)=>( 
+                <>
+                <SwiperSlide  key={index}><Card data={item} count={item.songs.length}/></SwiperSlide>
+                </>
               ))}
             </Swiper> 
           </div>

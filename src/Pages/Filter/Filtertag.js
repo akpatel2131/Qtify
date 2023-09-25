@@ -1,7 +1,8 @@
 import styles from "./FilterFeature.module.css";
 import Card from "../Card/Card";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useEffectOnce } from 'usehooks-ts'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
@@ -30,7 +31,7 @@ const SwiperTag = ( { value }) =>{
       setData(result.data);
     }
 
-    useEffect(()=>{
+    useEffectOnce(()=>{
       fetchData();
     })
 

@@ -11,7 +11,10 @@
     width: 100%;
     border-radius: var(--border-radius-xsmall);
     background-color:  var(--color-lightgray);
-}
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+    }
 
 .image{
     width: 100%;
@@ -29,7 +32,7 @@
     margin-top: var(--spacing-size-xxsmall);
     margin-bottom: var(--spacing-size-xxsmall);
     margin-left: var(--spacing-size-xxsmall);
-
+    max-width: 110px;
     border-radius: var(--border-radius-xsmall) ;
 }
 
@@ -41,3 +44,35 @@
     text-transform: uppercase;
     margin: var(--spacing-size-xsmall) 0;
 }
+
+  
+  .card .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--color-lightgray);
+    color: var(--color-white);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 102%;
+    left: 50%;
+    margin-left: -60px;
+    font-weight: 600;
+  }
+  
+  .card .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--color-lightgray) transparent transparent transparent;
+  }
+  
+  .card:hover .tooltiptext {
+    visibility: visible;
+  }
